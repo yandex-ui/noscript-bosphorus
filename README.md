@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/yandex-ui/noscript-bosphorus.png?branch=master)](https://travis-ci.org/yandex-ui/noscript-bosphorus)
+[![NPM version](https://badge.fury.io/js/noscript-bosphorus.png)](http://badge.fury.io/js/noscript-bosphorus)
+[![Dependency Status](https://david-dm.org/yandex-ui/noscript-bosphorus.png)](https://david-dm.org/yandex-ui/noscript-bosphorus)
+
 noscript-bosphorus
 ==================
 
