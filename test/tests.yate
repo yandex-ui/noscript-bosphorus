@@ -1,0 +1,16 @@
+module "main"
+
+include "../node_modules/noscript/yate/noscript.yate"
+include "../noscript-bosphorus.yate"
+
+match .app-ns-view-call ns-view-content {
+    <div class="js-test-call">
+        ns-view-call('someViewMethod')
+    </div>
+}
+
+match .app-ns-model-call ns-view-content {
+    <div class="js-model-call">
+        ns-model-call('model', 'getFoo')
+    </div>
+}

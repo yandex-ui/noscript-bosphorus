@@ -1,0 +1,37 @@
+{
+  "name": "noscript-bosphorus",
+  "version": "0.0.0",
+  "description": "Плагин для noscript, позволяющий вызывать методы View и Model из yate",
+  "main": "noscript-bosphorus.js",
+  "scripts": {
+    "test": "make && ./node_modules/karma/bin/karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yandex-ui/noscript-bosphorus.git"
+  },
+  "keywords": [
+    "noscript",
+    "yate"
+  ],
+  "author": "Aleksei Androsov <doochik@ya.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yandex-ui/noscript-bosphorus/issues"
+  },
+  "homepage": "https://github.com/yandex-ui/noscript-bosphorus",
+  "files": [
+    "noscript-bosphorus.js",
+    "noscript-bosphorus.yate"
+  ],
+  "devDependencies": {
+    "noscript": "git://github.com/yandex-ui/noscript.git#ns-view-patchtree",
+    "karma": "0.12.x",
+    "karma-borschik-preprocessor": "~0.1.2",
+    "karma-mocha": "^0.1.3",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma-sinon-chai": "0.1.x",
+    "mocha": "^1.18.2",
+    "yate": "*"
+  }
+}
