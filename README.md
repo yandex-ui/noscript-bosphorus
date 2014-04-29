@@ -32,3 +32,8 @@ match .my-view ns-view-content {
     </div>
 }
 ```
+
+## Подключение
+
+1. После подключения `noscript.js` и `noscript-yate-externals.js` надо подключить `noscript-bosphorus.js`
+2. В yate-файл после подключения `noscript.yate` надо подключить `noscript-bosphorus.yate`
