@@ -17,7 +17,7 @@ noscript-bosphorus
 ```
 match .my-view ns-view-content {
     <div class="js-test-call">
-        ns-view-call('modelName', 'someModelMethod')
+        ns-model-call('modelName', 'someModelMethod')
     </div>
 }
 ```
