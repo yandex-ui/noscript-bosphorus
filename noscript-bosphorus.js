@@ -11,7 +11,18 @@ ns.View.prototype.patchTree = function() {
  */
 yr.externals['_ns-view-call'] = function(view, methodName, p1, p2, p3, p4, p5) {
     view = yr.nodeset2data(view);
-    var result = view[methodName](p1, p2, p3, p4, p5);
+
+    try {
+        var result = view[methodName](p1, p2, p3, p4, p5);
+    } catch (e) {
+        ns.log.exception('ns-view-call', e, {
+            id: view.id,
+            key: view.key,
+            method: methodName
+        });
+        return yr.object2nodeset({});
+    }
+
     if (Array.isArray(result)) {
         return yr.array2nodeset(result);
     } else {
@@ -27,13 +38,26 @@ yr.externals['_ns-model-call'] = function(view, modelName, methodName, p1, p2, p
     view = yr.nodeset2data(view);
     var model = view.getModel(modelName);
     if (model) {
-        var result = model[methodName](p1, p2, p3, p4, p5);
+
+        try {
+            var result = model[methodName](p1, p2, p3, p4, p5);
+        } catch (e) {
+            ns.log.exception('ns-model-call', e, {
+                id: view.id,
+                key: view.key,
+                method: methodName,
+                model: modelName
+            });
+            return yr.object2nodeset({});
+        }
+
         if (Array.isArray(result)) {
             return yr.array2nodeset(result);
         } else {
             return yr.object2nodeset(result);
         }
     }
-    return null;
+
+    return yr.object2nodeset({});
 };
 

@@ -30,4 +30,39 @@ describe('ns-model-call', function() {
             });
     });
 
+    it('должен залогировать исключение при вызове метода', function() {
+        this.sinon.stub(ns.log, 'exception');
+
+        ns.Model.define('model', {
+            methods: {
+                getFoo: function() {
+                    throw 'getFooException';
+                }
+            }
+        });
+        var model = ns.Model.get('model').setData({foo: 'bar'});
+
+        ns.View.define('app-ns-model-call', {
+            models: ['model']
+        });
+        ns.layout.define('app', {
+            'app-ns-model-call': {}
+        });
+
+        var params = {};
+        var view = ns.View.create('app-ns-model-call');
+        var layout = ns.layout.page('app', params);
+
+        return new ns.Update(view, layout, params)
+            .start()
+            .then(function() {
+                expect(ns.log.exception).to.be.calledWith('ns-model-call', 'getFooException', {
+                    id: "app-ns-model-call",
+                    key: "view=app-ns-model-call",
+                    method: "getFoo",
+                    model: "model"
+                });
+            });
+    });
+
 });

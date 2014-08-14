@@ -25,4 +25,32 @@ describe('ns-view-call', function() {
             });
     });
 
+    it('должен залогировать исключение при вызове метода', function() {
+        this.sinon.stub(ns.log, 'exception');
+        ns.View.define('app-ns-view-call', {
+            methods: {
+                someViewMethod: function() {
+                    throw 'someViewMethodException';
+                }
+            }
+        });
+        ns.layout.define('app', {
+            'app-ns-view-call': {}
+        });
+
+        var params = {};
+        var view = ns.View.create('app-ns-view-call');
+        var layout = ns.layout.page('app', params);
+
+        return new ns.Update(view, layout, params)
+            .start()
+            .then(function() {
+                expect(ns.log.exception).to.be.calledWith('ns-view-call', 'someViewMethodException', {
+                    id: "app-ns-view-call",
+                    key: "view=app-ns-view-call",
+                    method: "someViewMethod"
+                });
+            });
+    });
+
 });
