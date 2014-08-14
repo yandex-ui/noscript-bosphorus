@@ -15,10 +15,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      "http://yastatic.net/jquery/1.11.0/jquery.min.js",
+      "node_modules/jquery/dist/jquery.min.js",
       "node_modules/yate/lib/runtime.js",
 
-      'node_modules/noscript/noscript.borschik.js',
+      'node_modules/noscript/dist/noscript.js',
       'node_modules/noscript/yate/noscript-yate-externals.js',
 
       'noscript-bosphorus.js',

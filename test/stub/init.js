@@ -1,14 +1,14 @@
 beforeEach(function() {
     this.sinon = sinon.sandbox.create();
 
-    this.sinon.spy(ns, 'tmpl');
+    this.sinon.spy(ns, 'renderString');
     this.sinon.stub(ns.history, 'pushState');
     this.sinon.stub(ns.history, 'replaceState');
 });
 
 afterEach(function() {
     this.sinon.restore();
-    ns.clean();
+    ns.reset();
 });
 
 // for phantomjs
