@@ -11,6 +11,18 @@ external nodeset _ns-view-call(nodeset, scalar, nodeset, nodeset, nodeset, nodes
 external nodeset _ns-model-call(nodeset, scalar, scalar, nodeset, nodeset, nodeset, nodeset, nodeset)
 
 /**
+ * Мост в JS для вызова метода вида
+ * @private
+ */
+external nodeset _ns-view-call-scalar(nodeset, scalar, scalar, nodeset, nodeset, nodeset, nodeset)
+
+/**
+ * Мост в JS для вызова методов моделей вида
+ * @private
+ */
+external nodeset _ns-model-call-scalar(nodeset, scalar, scalar, scalar, nodeset, nodeset, nodeset, nodeset)
+
+/**
  * Вызывает methodName текущего вида
  * @param {string} methodName Название метода
  * @param {...*} Аргументы
@@ -29,4 +41,25 @@ func ns-view-call(scalar methodName, nodeset p1, nodeset p2, nodeset p3, nodeset
  */
 func ns-model-call(scalar modelName, scalar methodName, nodeset p1, nodeset p2, nodeset p3, nodeset p4, nodeset p5) {
     _ns-model-call(/.bosphorus, modelName, methodName, p1, p2, p3, p4, p5)
+}
+
+/**
+ * Вызывает methodName текущего вида с первым параметром-скаляром
+ * @param {string} methodName Название метода
+ * @param {...*} Аргументы
+ * @returns nodeset
+ */
+func ns-view-call-scalar(scalar methodName, scalar p1, nodeset p2, nodeset p3, nodeset p4, nodeset p5) {
+    _ns-view-call-scalar(/.bosphorus, methodName, p1, p2, p3, p4, p5)
+}
+
+/**
+ * Вызывает methodName у модели modelName с первым параметром-скаляром
+ * @param {string} modelName Название модели
+ * @param {string} methodName Название модели
+ * @param {...*} Аргументы
+ * @returns nodeset
+ */
+func ns-model-call-scalar(scalar modelName, scalar methodName, scalar p1, nodeset p2, nodeset p3, nodeset p4, nodeset p5) {
+    _ns-model-call-scalar(/.bosphorus, modelName, methodName, p1, p2, p3, p4, p5)
 }

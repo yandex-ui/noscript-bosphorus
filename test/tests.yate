@@ -14,3 +14,15 @@ match .app-ns-model-call ns-view-content {
         ns-model-call('model', 'getFoo')
     </div>
 }
+
+match .app-ns-view-call-scalar ns-view-content {
+    <div class="js-test-call">
+        ns-view-call-scalar('someViewMethodWithScalar', 'test string')
+    </div>
+}
+
+match .app-ns-model-call-scalar ns-view-content {
+    <div class="js-model-call">
+        ns-model-call-scalar('model', 'getFooWithScalar', 'test string')
+    </div>
+}
