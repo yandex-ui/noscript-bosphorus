@@ -25,7 +25,7 @@
     "noscript-bosphorus.yate"
   ],
   "peerDependencies": {
-    "noscript": ">=0.4"
+    "noscript": "git://github.com/yandex-ui/noscript.git#0947d3a7eb484d872052bcd191234169444e553b"
   },
   "devDependencies": {
     "jquery": "1.11.0",
@@ -35,7 +35,7 @@
     "karma-phantomjs-launcher": "~0.1.0",
     "karma-sinon-chai": "0.1.x",
     "mocha": "^1.18.2",
-    "noscript": ">=0.4",
+    "noscript": "git://github.com/yandex-ui/noscript.git#0947d3a7eb484d872052bcd191234169444e553b",
     "yate": "*"
   }
 }
