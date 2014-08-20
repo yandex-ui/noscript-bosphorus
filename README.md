@@ -22,6 +22,10 @@ match .my-view ns-view-content {
 }
 ```
 
+## ns-model-call-scalar
+
+Тоже самое, что и `ns-model-call`, только первый аргумент вызова `scalar`.
+
 ## ns-view-call
 
 Вызывает метод вида. Можно передать до 5-и аргументов.
@@ -32,6 +36,10 @@ match .my-view ns-view-content {
     </div>
 }
 ```
+
+## ns-view-call-scalar
+
+Тоже самое, что и `ns-view-call`, только первый аргумент вызова `scalar`.
 
 ## Подключение
 
