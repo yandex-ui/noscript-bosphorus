@@ -29,7 +29,7 @@ external nodeset _ns-model-call-scalar(nodeset, scalar, scalar, scalar, nodeset,
  * @returns nodeset
  */
 func ns-view-call(scalar methodName, nodeset p1, nodeset p2, nodeset p3, nodeset p4, nodeset p5) {
-    _ns-view-call(/.bosphorus, methodName, p1, p2, p3, p4, p5)
+    _ns-view-call(/, methodName, p1, p2, p3, p4, p5)
 }
 
 /**
@@ -40,7 +40,7 @@ func ns-view-call(scalar methodName, nodeset p1, nodeset p2, nodeset p3, nodeset
  * @returns nodeset
  */
 func ns-model-call(scalar modelName, scalar methodName, nodeset p1, nodeset p2, nodeset p3, nodeset p4, nodeset p5) {
-    _ns-model-call(/.bosphorus, modelName, methodName, p1, p2, p3, p4, p5)
+    _ns-model-call(/, modelName, methodName, p1, p2, p3, p4, p5)
 }
 
 /**
@@ -50,7 +50,7 @@ func ns-model-call(scalar modelName, scalar methodName, nodeset p1, nodeset p2, 
  * @returns nodeset
  */
 func ns-view-call-scalar(scalar methodName, scalar p1, nodeset p2, nodeset p3, nodeset p4, nodeset p5) {
-    _ns-view-call-scalar(/.bosphorus, methodName, p1, p2, p3, p4, p5)
+    _ns-view-call-scalar(/, methodName, p1, p2, p3, p4, p5)
 }
 
 /**
@@ -61,5 +61,5 @@ func ns-view-call-scalar(scalar methodName, scalar p1, nodeset p2, nodeset p3, n
  * @returns nodeset
  */
 func ns-model-call-scalar(scalar modelName, scalar methodName, scalar p1, nodeset p2, nodeset p3, nodeset p4, nodeset p5) {
-    _ns-model-call-scalar(/.bosphorus, modelName, methodName, p1, p2, p3, p4, p5)
+    _ns-model-call-scalar(/, modelName, methodName, p1, p2, p3, p4, p5)
 }
