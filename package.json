@@ -1,6 +1,6 @@
 {
   "name": "noscript-bosphorus",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Плагин для noscript, позволяющий вызывать методы View и Model из yate",
   "main": "noscript-bosphorus.js",
   "scripts": {
