@@ -15,6 +15,9 @@ node_modules: package.json
 	npm install
 	touch node_modules
 
+publish: build
+	npm publish
+
 test: node_modules
 	npm test
 
