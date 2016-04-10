@@ -1,3 +1,4 @@
 .idea
 node_modules
 test/tests.yate.*
+noscript-bosphorus.js

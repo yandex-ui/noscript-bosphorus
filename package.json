@@ -36,6 +36,7 @@
     "karma-sinon-chai": "0.1.x",
     "mocha": "^1.18.2",
     "noscript": ">=0.4",
+    "webpack": "^1.12.14",
     "yate": "*"
   }
 }
