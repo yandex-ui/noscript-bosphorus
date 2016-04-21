@@ -24,7 +24,7 @@
     "noscript-bosphorus.externals.js",
     "noscript-bosphorus.ns.js",
     "noscript-bosphorus.js",
-    "noscript-bosphorus.ns.yate"
+    "noscript-bosphorus.yate"
   ],
   "peerDependencies": {
     "noscript": ">=0.4"
